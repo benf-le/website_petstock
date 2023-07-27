@@ -8,7 +8,10 @@
 .btn{
     text-transform: capitalize;
 }
-
+.p-btn-addToCart{
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+}
 /*:root {*/
 /*  --foreground-rgb: 0, 0, 0;*/
 /*  --background-start-rgb: 214, 219, 220;*/
