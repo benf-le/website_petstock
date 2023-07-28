@@ -1,6 +1,7 @@
-import {Body, Controller, Post, Req} from '@nestjs/common';
+import {Body, Controller, Post} from '@nestjs/common';
 import {AuthService} from "./auth.service";
 import {register} from "tsconfig-paths";
+import {AuthDTO} from "./dto";
 
 @Controller({})
 export class AuthController {
@@ -9,9 +10,8 @@ export class AuthController {
     }
     // some request form client
     @Post("register") // register a new user
-    register(@Body body:AuthDTO){
-        console.log(body);
-        return  this.authService.register()
+     register(@Body() authDTO:AuthDTO){
+        return this.authService.register(authDTO)
     }
 
     @Post("login")
