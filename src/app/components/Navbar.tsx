@@ -116,7 +116,9 @@ export default function Navbar(props) {
             <ul className="pet-stock-color menu menu-horizontal space-x-5 px-1">
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Dog</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Dog</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -129,7 +131,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Cat</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Cat</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -142,7 +146,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Fish</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Fish</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -155,7 +161,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Horse</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Horse</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -168,7 +176,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Bird</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Bird</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -181,7 +191,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Small Animal</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Small Animal</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -194,7 +206,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Reptile</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Reptile</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -207,7 +221,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Cat</summary>
+                  <summary className="text-white">
+                    <a className="text-white">Pet Service</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -220,7 +236,9 @@ export default function Navbar(props) {
               </li>
               <li tabIndex={0}>
                 <details>
-                  <summary className="text-white">Pet Service</summary>
+                  <summary className="text-white">
+                    <a className="text-white">More</a>
+                  </summary>
                   <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
@@ -231,19 +249,7 @@ export default function Navbar(props) {
                   </ul>
                 </details>
               </li>
-              <li tabIndex={0}>
-                <details>
-                  <summary className="text-white">More</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
+
               <button className="btn btn-ghost bg-red-600 text-white">
                 Sale
               </button>
