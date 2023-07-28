@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import Products from "@/app/components/Products";
+import React from "react";
 
 export default async function Home() {
   return (
@@ -140,7 +141,13 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <Products />
+      <product>
+        <h1 className="py-10 pl-48 text-2xl font-semibold">
+          Get more for less with Petstock
+        </h1>
+        <Products />
+      </product>
+
       <Footer />
     </div>
   );

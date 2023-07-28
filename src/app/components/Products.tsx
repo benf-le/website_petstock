@@ -4,12 +4,8 @@ function Products(props) {
   return (
     <div>
       <product>
-        <h1 className="py-10 pl-48 text-2xl font-semibold">
-          Get more for less with Petstock
-        </h1>
-
-        <card className="flex w-screen flex-nowrap justify-center">
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
+        <card className="flex w-full flex-nowrap justify-center">
+          <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
               <img src="/./logo_petstock.png" alt="Shoes" />
             </figure>
@@ -26,7 +22,7 @@ function Products(props) {
               </div>
             </div>
           </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
+          <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
               <img src="/./logo_petstock.png" alt="Shoes" />
             </figure>
@@ -43,7 +39,7 @@ function Products(props) {
               </div>
             </div>
           </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
+          <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
               <img src="/./logo_petstock.png" alt="Shoes" />
             </figure>
@@ -60,7 +56,7 @@ function Products(props) {
               </div>
             </div>
           </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
+          <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
               <img src="/./logo_petstock.png" alt="Shoes" />
             </figure>
