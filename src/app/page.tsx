@@ -1,73 +1,12 @@
 import Image from "next/image";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import Products from "@/app/components/Products";
 
 export default async function Home() {
   return (
     <div>
-      <header>
-        <div className="pet-stock-color navbar flex h-20 flex-grow bg-base-100">
-          <div className="basis-1/4 justify-center">
-            <a className="btn btn-ghost text-xl text-white">PET STOCK</a>
-          </div>
-
-          <div className="basis-1/2">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-full"
-            />
-          </div>
-          <div className="basis-1/4 justify-center">
-            <button className="btn btn-ghost text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                />
-              </svg>
-              Login
-            </button>
-            <button className="btn btn-ghost text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </header>
-      <menu className="pet-stock-color navbar flex h-20 flex-grow justify-center bg-base-100">
-        <div className="join space-x-10">
-          <button className="btn btn-ghost text-white">Dog</button>
-          <button className="btn btn-ghost text-white">Cat</button>
-          <button className="btn btn-ghost text-white">Fish</button>
-          <button className="btn btn-ghost text-white">Horse</button>
-          <button className="btn btn-ghost text-white">Bird</button>
-          <button className="btn btn-ghost text-white">Small Animal</button>
-          <button className="btn btn-ghost text-white">Reptile</button>
-          <button className="btn btn-ghost text-white">Pet Service</button>
-          <button className="btn btn-ghost text-white">More</button>
-          <button className="btn btn-ghost bg-red-600 text-white">Sale</button>
-        </div>
-      </menu>
-
+      <Navbar />
       <div>
         <div
           className="hero"
@@ -201,83 +140,8 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
-      <product>
-        <h1 className="py-10 pl-48 text-2xl font-semibold">
-          Get more for less with Petstock
-        </h1>
-
-        <card className="flex w-screen flex-nowrap justify-center">
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
-            <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-base">
-                Royal Canin Intense Beauty Adult In Jelly Wet Cat Food 85G
-              </h2>
-              <p className="text-sm">RC cat 85g $2.85ea when you buy 36</p>
-              <p className="py-8 text-3xl font-semibold">$3.45</p>
-              <div className="card-actions ">
-                <button className="p-btn-addToCart btn btn-primary">
-                  Add to Card
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
-            <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-base">
-                Royal Canin Intense Beauty Adult In Jelly Wet Cat Food 85G
-              </h2>
-              <p className="text-sm">RC cat 85g $2.85ea when you buy 36</p>
-              <p className="py-8 text-3xl font-semibold">$3.45</p>
-              <div className="card-actions ">
-                <button className="p-btn-addToCart btn btn-primary">
-                  Add to Card
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
-            <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-base">
-                Royal Canin Intense Beauty Adult In Jelly Wet Cat Food 85G
-              </h2>
-              <p className="text-sm">RC cat 85g $2.85ea when you buy 36</p>
-              <p className="py-8 text-3xl font-semibold">$3.45</p>
-              <div className="card-actions ">
-                <button className="p-btn-addToCart btn btn-primary">
-                  Add to Card
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="card ml-5 w-72 bg-base-100 shadow-xl">
-            <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title text-base">
-                Royal Canin Intense Beauty Adult In Jelly Wet Cat Food 85G
-              </h2>
-              <p className="text-sm">RC cat 85g $2.85ea when you buy 36</p>
-              <p className="py-8 text-3xl font-semibold">$3.45</p>
-              <div className="card-actions ">
-                <button className="p-btn-addToCart btn btn-primary">
-                  Add to Card
-                </button>
-              </div>
-            </div>
-          </div>
-        </card>
-      </product>
+      <Products />
+      <Footer />
     </div>
   );
 }
