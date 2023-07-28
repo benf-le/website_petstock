@@ -7,7 +7,7 @@ function Products(props) {
         <card className="flex w-full flex-nowrap justify-center">
           <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
+              <img src="/logo_petstock.png" alt="Shoes" />
             </figure>
             <div className="card-body">
               <h2 className="card-title text-base">
@@ -24,7 +24,7 @@ function Products(props) {
           </div>
           <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
+              <img src="/logo_petstock.png" alt="Shoes" />
             </figure>
             <div className="card-body">
               <h2 className="card-title text-base">
@@ -41,7 +41,7 @@ function Products(props) {
           </div>
           <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
+              <img src="/logo_petstock.png" alt="Shoes" />
             </figure>
             <div className="card-body">
               <h2 className="card-title text-base">
@@ -58,7 +58,7 @@ function Products(props) {
           </div>
           <div className="card ml-5 w-64 bg-base-100 shadow-xl">
             <figure>
-              <img src="/./logo_petstock.png" alt="Shoes" />
+              <img src="/logo_petstock.png" alt="Shoes" />
             </figure>
             <div className="card-body">
               <h2 className="card-title text-base">

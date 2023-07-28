@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-import Products from "@/app/components/Products";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Products from "@/components/Products";
 import React from "react";
 
 export default async function Home() {

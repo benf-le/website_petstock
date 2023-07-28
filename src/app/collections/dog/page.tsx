@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-import Products from "@/app/components/Products";
-import MenuCollection from "@/app/components/MenuCollection";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Products from "@/components/Products";
+import MenuCollection from "@/components/MenuCollection";
 
 function Page(props) {
   return (
