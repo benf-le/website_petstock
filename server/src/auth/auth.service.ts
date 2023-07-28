@@ -10,24 +10,35 @@ export class AuthService {
 
     }
 
-    async register(authDTO: AuthDTO){
+    async register(authDTO: AuthDTO) {
         // ma hoa password
         const hashedPassword = await argon.hash(authDTO.password)
 
-        // them data vao database
-        const user = await this.prismaService.user.create({
-            data:{
-                email: authDTO.email,
-                password: hashedPassword,
-                firstName:'',
-                lastName:'',
-            }
-        })
+        try {
+            // them data vao database
+            const user = await this.prismaService.user.create({
+                data: {
+                    email: authDTO.email,
+                    password: hashedPassword,
+                    firstName: '',
+                    lastName: '',
+                },
+                // chỉ hiện ra các trường có true, khi trả data về
+                select: {
+                    id: true,
+                    email: true,
+                    createdAt: true
+                }
+            })
+            return user
+        } catch (error) {
+            return error
+        }
 
-        return user
+
     }
 
-    login(){
+    login() {
         return 'Login'
     }
 }
