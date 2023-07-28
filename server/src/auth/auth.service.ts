@@ -1,4 +1,4 @@
-import {Injectable} from '@nestjs/common';
+import {ForbiddenException, Injectable} from '@nestjs/common';
 import {PrismaService} from "../prisma/prisma.service";
 import {AuthDTO} from "./dto";
 import * as argon from "argon2";
@@ -32,14 +32,35 @@ export class AuthService {
             })
             return user
         } catch (error) {
+            if (error.code =='P2002'){
+                throw new ForbiddenException('Email already registered!')
+            }
             return error
         }
 
 
     }
 
-    login() {
-        return 'Login'
+    async login(authDTO: AuthDTO) {
+        //find user with input email
+        const user = await this.prismaService.user.findUnique({
+            where:{
+                email:authDTO.email
+            }
+        })
+        if(!user){
+            throw new ForbiddenException('User not exist!')
+        }
+
+        const passwordMatched = await argon.verify(
+            user.password, //không phải là lỗi, ide báo sai
+            authDTO.password)
+
+        if(!passwordMatched){
+            throw new ForbiddenException('Incorrect password!')
+        }
+
+        return user
     }
 }
 
