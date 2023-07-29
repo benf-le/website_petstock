@@ -1,6 +1,11 @@
 import React from "react";
 
 function Page(props) {
+
+  const loginSubmit = async (e) =>{
+
+  }
+
   return (
     <div>
       <div className=" pet-stock-color hero min-h-screen bg-base-200">

@@ -53,13 +53,14 @@ export class AuthService {
         }
 
         const passwordMatched = await argon.verify(
-            user.password, //không phải là lỗi, ide báo sai
+            user.password, //ĐÃ TEST. password trong trường hợp này là hashPassword. Không phải là lỗi, ide báo sai
             authDTO.password)
 
         if(!passwordMatched){
             throw new ForbiddenException('Incorrect password!')
         }
 
+        delete  user.password //ĐÃ TEST. không phải là lỗi, ide báo sai. Xoá hashPassword đi để tránh lộ hashPassword khi trả data về client
         return user
     }
 }
