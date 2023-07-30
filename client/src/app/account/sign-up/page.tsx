@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 function Page(props) {
   return (
@@ -60,9 +61,11 @@ function Page(props) {
                 </button>
 
                 <p className="mt-10 text-center">Already have an account?</p>
+                <Link href="/account/login">
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
+                </Link>
               </div>
             </div>
           </div>

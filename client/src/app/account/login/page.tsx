@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 function Page(props) {
 
@@ -51,10 +52,11 @@ function Page(props) {
 
               {/* eslint-disable-next-line react/no-unescaped-entities */}
               <p className="mt-10 text-center">Don't have an account?</p>
-
+              <Link href="/account/sign-up">
               <div className="form-control ">
                 <button className="btn btn-success">Sign Up</button>
               </div>
+              </Link>
             </div>
           </div>
         </div>
