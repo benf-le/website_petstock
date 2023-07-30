@@ -1,13 +1,38 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
+
+
 function Page(props) {
 
-  const loginSubmit = async (e) =>{
+  const [user, setUser] = React.useState({
+      email:'',
+      password:''
+  } )
 
-  }
+  //   const [buttonDisabled, setButtonDisabled]= React.useState(false)
+  //
+  //
+  //
+  // const loginSubmit = async (e) =>{
+  //
+  // }
+  //
+  //   React.useEffect(()=>{
+  //     if(user.email.length>0 && user.password.length>0){
+  //         setButtonDisabled(false)
+  //     } else {
+  //         setButtonDisabled(true)
+  //     }
+  // },[user])
 
-  return (
+
+    function onLogin() {
+
+    }
+
+    return (
     <div>
       <div className=" pet-stock-color hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -21,14 +46,20 @@ function Page(props) {
           </div>
           <div className="card w-full max-w-sm flex-shrink-0 bg-base-100 shadow-2xl">
             <div className="card-body">
+                <form >
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
+
                 <input
-                  type="text"
+                  id="email"
+                  type="email"
                   placeholder="Email"
+                  value={user.email}
+                  required={true}
                   className="input input-bordered"
+                  onChange={(e)=>setUser({...user,email: e.target.value})}
                 />
               </div>
               <div className="form-control">
@@ -36,9 +67,12 @@ function Page(props) {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="text"
+                  id="password"
+                  type="password"
+                  value={user.password}
                   placeholder="Password"
                   className="input input-bordered"
+                  onChange={(e)=>setUser({...user,password: e.target.value})}
                 />
                 <label className="label">
                   <a href="#" className="link-hover link label-text-alt">
@@ -46,8 +80,9 @@ function Page(props) {
                   </a>
                 </label>
               </div>
+                </form>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button onClick={onLogin} className="btn btn-primary">Login</button>
               </div>
 
               {/* eslint-disable-next-line react/no-unescaped-entities */}
