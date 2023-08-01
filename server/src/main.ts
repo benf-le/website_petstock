@@ -4,6 +4,7 @@ import {ValidationPipe} from "@nestjs/common";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
 
   // add middleware HERE!
   app.useGlobalPipes(new ValidationPipe()); //request gửi đến controller thì đi qua ValidationPipe

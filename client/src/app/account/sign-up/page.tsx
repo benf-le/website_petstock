@@ -1,21 +1,57 @@
+"use client";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-
+import axios from "axios";
+import { useRouter } from 'next/navigation'; // nếu dùng "use client" thì dùng from 'next/navigation', còn lại thì dùng from 'next/router';
 function Page(props) {
+    const router = useRouter(); //dùng để quản lý điều hướng trong Next.js
 
     const [user, setUser] = React.useState({
         firstName: '',
         lastName: '',
         email: '',
         password: ''
+
     })
 
-    const [confirmPassword, setConfirmPassword] = React.useState({confirmPassword: ''})
+    const [confirmPassword, setConfirmPassword] = React.useState<string>(null) //Sử dụng <string> là cách để cho TypeScript biết rằng confirmPassword là một biến có kiểu dữ liệu là chuỗi.
+    // const [password, setPassword] = React.useState({ })
+    const [error, setError] = React.useState<string>(null)
+
+    const onSignUp = async (e) => {
+
+        e.preventDefault() //chặn reload trang
+        try {
+            if (user.password !== confirmPassword) {
+                setError('Password needs to match!')
+                return
+
+            } else {
+                const response = await axios.post(`http://localhost:8000/register`, user)
 
 
-    const onSignUp = async () => {
+                if (response.status === 201) {
+                    // Đăng ký thành công
+                    // Sau khi đăng ký thành công, điều hướng đến một trang khác
+                     router.push('/');
 
+                    // window.location.reload(); // Tùy chỉnh theo nhu cầu của bạn
+                } else {
+                    // Xử lý lỗi không rõ ràng từ backend
+                    setError('Something went wrong. Please try again later.');
+                }
+
+
+            }
+        } catch (error) {
+            // Xử lý lỗi từ API NestJS
+            if (error.response) {
+                setError(error.response.data.message); // Lấy thông báo lỗi từ phản hồi API
+            } else {
+                setError('Something went wrong. Please try again later.'); // Lỗi không rõ ràng không có phản hồi từ API
+            }
+        }
     }
 
     return (
@@ -69,25 +105,26 @@ function Page(props) {
                                     type="password"
                                     placeholder="Password"
                                     name="password"
+
                                     className="input input-bordered"
                                     onChange={(e) => setUser({...user, password: e.target.value})}
+
+                                    // onChange={(e) => setPassword({...password, password: e.target.value})}
 
                                 />
                             </div>
                             <div className="form-control py-1">
                                 <input
                                     id="confirmPassword"
-                                    type="text"
+                                    type="password"
                                     placeholder="Confirm Password"
                                     name="confirmPassword"
                                     className="input input-bordered"
-                                    onChange={(e) => setConfirmPassword({
-                                        ...confirmPassword,
-                                        confirmPassword: e.target.value
-                                    })}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
 
                                 />
                             </div>
+                            <p className="text-center text-red-500">{error}</p>
                             <div className="form-control mt-6">
                                 <button type="submit" className="btn btn-success" onClick={onSignUp}>Sign Up
                                 </button>
