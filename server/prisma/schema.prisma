@@ -7,13 +7,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model products {
-//   id          String @id @default(auto()) @map("_id") @db.ObjectId
-//   description String
-//   imageUrl    String
-//   name        String
-//   price       Int
-// }
+model Products {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  imageUrl    String
+  name        String
+  price       Int
+  forSale     Boolean
+
+  @@map("products") //làm cách này để có thể đổi tên model tuỳ ý, mà có thể truy xuất data từ collection users của database
+
+}
 
 model User {
   id        String @id @default(auto()) @map("_id") @db.ObjectId

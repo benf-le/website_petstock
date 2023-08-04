@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Products from "@/components/Products";
+import Products from "@/components/ProductsCard";
 import MenuCollection from "@/components/MenuCollection";
 
 function Page(props) {

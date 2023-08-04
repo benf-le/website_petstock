@@ -6,7 +6,7 @@ import * as argon from "argon2";
 
 @Injectable({})
 export class AuthService {
-    constructor(private prismaService: PrismaService) {
+    constructor(private prismaService: PrismaService) { //constructor:k hởi tạo PrismaService khi một đối tượng của lớp được tạo.
 
     }
 

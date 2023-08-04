@@ -44,6 +44,8 @@ function Page(props) {
             }
         }
     }
+
+
     //
     //   React.useEffect(()=>{
     //     if(user.email.length>0 && user.password.length>0){
@@ -52,6 +54,9 @@ function Page(props) {
     //         setButtonDisabled(true)
     //     }
     // },[user])
+
+
+
 
 
 
