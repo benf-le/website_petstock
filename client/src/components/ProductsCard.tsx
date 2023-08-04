@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import HandleProductsSale from "@/api/HandleProductsSale";
 import {Products} from "@/models/Products";
-import {toChildArray} from "preact";
+
 
 
 export default function ProductsCard() {
@@ -13,6 +13,7 @@ export default function ProductsCard() {
     useEffect(() => {
         getSaleProducts()
     }, [])
+
     const getSaleProducts = async () => {
         const api = `/showProductsSale`
 
