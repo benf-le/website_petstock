@@ -1,31 +1,47 @@
 "use client";
-import React from "react";
-import axios, {isAxiosError} from "axios";
-import {Product} from "@prisma/client";
+import React, {useEffect, useState} from "react";
 import Link from "next/link";
+import HandleProductsSale from "@/api/HandleProductsSale";
+import {Products} from "@/models/Products";
+import {toChildArray} from "preact";
 
 
-interface ProductCardProps {
-    product: Product
-}
+export default function ProductsCard() {
 
-export default function ProductsCard({product}:ProductCardProps) {
-        return (
-            <div>
-                <product>
-                    <Link href={"/products/"${product.id}}>
-                    <card className="flex w-full flex-nowrap justify-center">
+    const [productSale, setProductSale] = useState<Products[]>([]) //Products co dang array
 
-                        <div className="card ml-5 w-64 bg-base-100 shadow-xl">
+    useEffect(() => {
+        getSaleProducts()
+    }, [])
+    const getSaleProducts = async () => {
+        const api = `/showProductsSale`
+
+        try {
+            const res: any = await HandleProductsSale.getProductsSale(api)
+            if (res) {
+                setProductSale(res)
+            }
+        } catch (e) {
+            console.log(`Product not found: ${e.message}`)
+        }
+    }
+
+    return (
+        <div>
+            <div className="py-10 pl-48 my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center">
+                {productSale.length > 0 && productSale.map(item =>
+
+                    <Link href={`/products/${item.id}`}>
+                        <div className="card ml-5 w-64 bg-base-100 shadow-xl ">
                             <figure>
-                                <img src={product.imageUrl} alt="Shoes"/>
+                                <img src={item.imageUrl} alt="Shoes"/>
                             </figure>
                             <div className="card-body">
                                 <h2 className="card-title text-base">
-                                    {product.name}
+                                    {item.name}
                                 </h2>
-                                <p className="text-sm">{product.description}</p>
-                                <p className="py-8 text-3xl font-semibold">${product.price}</p>
+                                <p className="text-sm">{item.description}</p>
+                                <p className="py-8 text-3xl font-semibold">${item.price}</p>
                                 <div className="card-actions ">
                                     <button className="p-btn-addToCart pet-stock-color btn text-white">
                                         Add to Card
@@ -33,15 +49,11 @@ export default function ProductsCard({product}:ProductCardProps) {
                                 </div>
                             </div>
                         </div>
-
-
-
-
-                    </card>
                     </Link>
-                </product>
-            </div>
-        );
+
+            )}</div>
+        </div>
+    );
 
 }
 
