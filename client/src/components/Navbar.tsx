@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Navbar(props) {
     return (
         <div>
-            <header className="sticky left-0 right-0 top-0 z-20">
-                <div className=" pet-stock-color navbar  flex h-20 flex-grow bg-base-100">
+            <header className="h-20">
+                <div className=" pet-stock-color navbar  flex h-20 flex-grow bg-base-100 fixed left-0 right-0 top-0 z-10 ">
 
                     <div className="basis-1/4 justify-center">
                         <Link href="/" className="btn btn-ghost text-xl text-white">PET STOCK</Link>
@@ -58,20 +58,7 @@ export default function Navbar(props) {
                     </div>
                 </div>
             </header>
-            {/*<menu className="pet-stock-color navbar flex h-20 flex-grow justify-center bg-base-100">*/}
-            {/*  <div className="join space-x-10">*/}
-            {/*    <button className="btn btn-ghost text-white">Dog</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Cat</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Fish</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Horse</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Bird</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Small Animal</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Reptile</button>*/}
-            {/*    <button className="btn btn-ghost text-white">Pet Service</button>*/}
-            {/*    <button className="btn btn-ghost text-white">More</button>*/}
-            {/*    <button className="btn btn-ghost bg-red-600 text-white">Sale</button>*/}
-            {/*  </div>*/}
-            {/*</menu>*/}
+
 
             <menu>
                 <div className=" pet-stock-color navbar bg-base-100  ">
@@ -117,67 +104,67 @@ export default function Navbar(props) {
                             </ul>
                         </div>
                     </div>
-                    <div className="navbar flex hidden h-10 flex-grow justify-center lg:flex">
+                    <div className="navbar flex hidden h-8 flex-grow justify-center lg:flex m-0">
                         <ul className="pet-stock-color menu menu-horizontal space-x-5 px-1">
-                            <div className="dropdown dropdown-hover">
+                            <div className="dropdown dropdown-hover  ">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Dog</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Cat</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Fish</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Horse</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Bird</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Small Animal</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Reptile</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">Pet Service</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
                             </div>
                             <div className="dropdown dropdown-hover">
                                 <label tabIndex={0} className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900">More</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                <ul tabIndex={0} className="mt-3 dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Item 1</a></li>
                                     <li><a>Item 2</a></li>
                                 </ul>
