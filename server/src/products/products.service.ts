@@ -12,6 +12,7 @@ export class ProductsService {
     async getProducts(productsDTO: ProductsDTO) {
         try {
             const products = await this.prismaService.products.findMany({
+
             })
             return products
         } catch (error) {

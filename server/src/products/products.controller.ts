@@ -10,7 +10,7 @@ export class ProductsController{
     constructor(private productsService: ProductsService) {
 
     }
-    @Get("showProducts") // register a new user
+    @Get(`showProducts`) // register a new user
     async getProducts(productsDTO:ProductsDTO){
         return await this.productsService.getProducts(productsDTO)
     }

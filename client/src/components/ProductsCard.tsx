@@ -1,7 +1,7 @@
 "use client";
 import React, {useEffect, useState} from "react";
 import Link from "next/link";
-import HandleProductsSale from "@/api/HandleProductsSale";
+import HandleProducts from "@/api/HandleProducts";
 import {Products} from "@/models/Products";
 
 
@@ -18,7 +18,7 @@ export default function ProductsCard() {
         const api = `/showProductsSale`
 
         try {
-            const res: any = await HandleProductsSale.getProductsSale(api)
+            const res: any = await HandleProducts.getProducts(api)
             if (res) {
                 setProductSale(res)
             }

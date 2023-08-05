@@ -2,8 +2,8 @@
 import axiosClient from "@/api/axiosClient";
 import {BASE_URL} from "@/constant/appInfo";
 
-class HandleProductsSale {
-    static getProductsSale = async (url:string)=>{
+class HandleProducts {
+    static getProducts = async (url:string)=>{
         return axiosClient.get(BASE_URL +url)
     }
 
@@ -11,4 +11,4 @@ class HandleProductsSale {
 }
 
 
-export default HandleProductsSale
+export default HandleProducts

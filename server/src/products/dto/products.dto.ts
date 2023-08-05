@@ -2,6 +2,7 @@
 import {IsEmail, IsNotEmpty, IsString} from 'class-validator'
 
 export class ProductsDTO {
+    id: string
     @IsEmail() // dung de validate
     @IsNotEmpty() // dung de validate
     name: string
