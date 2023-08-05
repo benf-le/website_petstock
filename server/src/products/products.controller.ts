@@ -1,23 +1,33 @@
-import {Body, Controller, Get, Post} from "@nestjs/common";
+import { Controller, Get, Param} from "@nestjs/common";
 import {ProductsDTO} from "./dto";
 import {ProductsService} from "./products.service";
 
 
-@Controller({})
+@Controller('showProducts')
 
 export class ProductsController{
 
     constructor(private productsService: ProductsService) {
 
     }
-    @Get(`showProducts`) // register a new user
+    @Get(`/`)
     async getProducts(productsDTO:ProductsDTO){
         return await this.productsService.getProducts(productsDTO)
     }
 
-    @Get("showProductsSale") // register a new user
+    @Get("/sale")
     async getProductsSale(productsDTO:ProductsDTO){
         return await this.productsService.getProductsSale(productsDTO)
     }
+
+    @Get(`:id`) // register a new user
+        async getProductsById(@Param('id')id: string){
+        return await this.productsService.getProductsById(id)
+    }
+
+    // @Get("showProductsSale:id") // register a new user
+    // async getProductsSale(productsDTO:ProductsDTO){
+    //     return await this.productsService.getProductsSale(productsDTO)
+    // }
 
 }

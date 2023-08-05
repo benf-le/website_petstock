@@ -112,8 +112,9 @@ export default function Navbar(props) {
                   <div className="navbar flex hidden h-8 flex-grow justify-center lg:flex m-0">
                         <ul className="pet-stock-color menu menu-horizontal space-x-5 px-1">
                             <div className="dropdown dropdown-hover ">
-                                <label tabIndex={0}
-                                       className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900 ">Dog</label>
+                                <Link href="/collections/dog">
+                                    <label tabIndex={0}
+                                           className="btn m-1 text-white pet-stock-color border-none hover:text-sky-900 ">Dog</label></Link>
 
                             </div>
                             <div className="dropdown dropdown-hover">

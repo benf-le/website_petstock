@@ -11,9 +11,17 @@
 .btn{
     text-transform: capitalize;
 }
-.p-btn-addToCart{
+.p-btn-addToCartSale{
     padding-left: 3.4rem;
     padding-right: 3.4rem;
+}
+.p-btn-addToCart{
+    padding-left: 1.9rem;
+    padding-right: 1.9rem;
+}
+
+.background-collections-product{
+    background: rgb(247, 248, 248);
 }
 /*:root {*/
 /*  --foreground-rgb: 0, 0, 0;*/
