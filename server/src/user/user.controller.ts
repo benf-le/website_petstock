@@ -14,7 +14,8 @@ export class UserController {
     'path: users/me'
     @Get('me')
     me(@GetUser() user: User){
-        // console.log(JSON.stringify(Object.keys(request)))
         return user
     }
+
+
 }

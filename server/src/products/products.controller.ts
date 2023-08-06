@@ -3,7 +3,7 @@ import {ProductsDTO} from "./dto";
 import {ProductsService} from "./products.service";
 
 
-@Controller('showProducts')
+@Controller('products')
 
 export class ProductsController{
 

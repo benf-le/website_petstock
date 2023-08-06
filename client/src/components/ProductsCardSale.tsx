@@ -15,7 +15,7 @@ export default function ProductsCardSale() {
     }, [])
 
     const getSaleProducts = async () => {
-        const api = `/showProducts/sale`
+        const api = `/products/sale`
 
         try {
             const res: any = await HandleProducts.getProducts(api)
